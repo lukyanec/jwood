@@ -1,0 +1,905 @@
+@font-face {
+  font-family: 'FeltTipWoman';
+  src: url("../fonts/Felt-Tip-Woman.otf") format("OpenType");
+  src: url("../fonts/Felt-Tip-Woman.eot"), url("../fonts/Felt-Tip-Woman.svg") format("svg"), url("../fonts/Felt-Tip-Woman.woff") format("woff"), url("../fonts/Felt-Tip-Woman.ttf") format("truetype")
+}
+
+@font-face {
+  font-family: 'NexaLight';
+  src: url("../fonts/Nexa-Light.otf") format("OpenType");
+  src: url("../fonts/Nexa-Light.eot"), url("../fonts/Nexa-Light.svg") format("svg"), url("../fonts/Nexa-Light.woff") format("woff"), url("../fonts/Nexa-Light.ttf") format("truetype")
+}
+
+@font-face {
+  font-family: 'NexaBold';
+  src: url("../fonts/Nexa-Bold.otf") format("OpenType");
+  src: url("../fonts/Nexa-Bold.eot"), url("../fonts/Nexa-Bold.svg") format("svg"), url("../fonts/Nexa-Bold.woff") format("woff"), url("../fonts/Nexa-Bold.ttf") format("truetype")
+}
+
+@font-face {
+  font-family: 'OpenSansLight';
+  src: url("../fonts/OpenSans-Light.otf") format("OpenType");
+  src: url("../fonts/OpenSans-Light.eot"), url("../fonts/OpenSans-Light.svg") format("svg"), url("../fonts/OpenSans-Light.woff") format("woff"), url("../fonts/OpenSans-Light.ttf") format("truetype")
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box
+}
+
+body {
+  font: 16px "OpenSansLight", Arial, sans-serif;
+  color: #202020
+}
+
+img {
+  max-width: 100%;
+  height: auto
+}
+
+a {
+  text-decoration: none;
+  color: #202020
+}
+
+ul {
+  list-style: none
+}
+
+.container {
+  width: 100%;
+  max-width: 1780px;
+  margin: 0 auto;
+  padding: 0 15px
+}
+
+header,
+section {
+  padding-bottom: 50px
+}
+
+header {
+  background: url(../images/main-bg.jpg) no-repeat bottom center;
+  background-size: cover
+}
+
+.main_nav {
+  padding: 35px 0;
+  text-align: center;
+  border-bottom: 1px solid #fff;
+}
+
+.main_nav ul {
+  display: inline-block
+}
+
+.main_nav ul:after {
+  content: "";
+  display: block;
+  clear: both
+}
+
+.main_nav li {
+  float: left;
+  margin-right: 40px
+}
+
+.main_nav li:last-child {
+  margin-right: 0
+}
+
+.main_nav a {
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #f1f1f1;
+  position: relative;
+  z-index: 1;
+  padding: 5px;
+  font-family: "NexaLight"
+}
+
+.main_nav a:hover {
+  color: #202020
+}
+
+.main_nav a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #f1f1f1;
+  -webkit-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+  z-index: -1;
+  text-align: left
+}
+
+.main_nav a:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  background: #f1f1f1;
+  -webkit-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+  z-index: -1;
+  text-align: right
+}
+
+.main_nav a:hover:after,
+.main_nav a:hover:before {
+  width: 50%
+}
+
+@media screen and (max-width:768px) {
+  .main_nav {
+    padding: 20px 0
+  }
+
+  .main_nav a {
+    font-size: 18px
+  }
+}
+
+@media screen and (max-width:600px) {
+  .main_nav li {
+    margin-right: 25px
+  }
+}
+
+@media screen and (max-width:520px) {
+  .main_nav a {
+    font-size: 16px
+  }
+
+  .main_nav li {
+    float: none;
+    display: inline-block;
+    margin: 10px
+  }
+
+  .main_nav li:last-child {
+    margin: 10px
+  }
+}
+
+.header_content {
+  text-align: center;
+  margin-top: 145px
+}
+
+.h_title {
+  font-size: 4vw;
+  text-transform: uppercase;
+  color: #f1f1f1;
+  font-family: "NexaLight";
+  margin-top: 40px
+}
+
+.h_title span {
+  font-family: "NexaBold"
+}
+
+.scroll_down {
+  color: #f1f1f1;
+  font-family: "NexaBold";
+  text-transform: uppercase;
+  font-size: 18px;
+  margin-top: 135px;
+  text-align: center;
+  line-height: 1.6em
+}
+
+.scroll_down:after {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 32px;
+  background: url(../images/double-arrow-sprite.png) no-repeat 0px 0px;
+  margin: 20px auto 0 auto;
+  -webkit-animation: moveArrow 1s ease infinite;
+  animation: moveArrow 1s ease infinite
+}
+
+@-webkit-keyframes moveArrow {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+  }
+
+  50% {
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px)
+  }
+
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+  }
+}
+
+@keyframes moveArrow {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+  }
+
+  50% {
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px)
+  }
+
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+  }
+}
+
+@media screen and (min-width:1660px) {
+  .h_title {
+    font-size: 3vw
+  }
+}
+
+@media screen and (max-width:991px) {
+  .h_title {
+    font-size: 6vw
+  }
+}
+
+.about_nav,
+.footer_nav {
+  padding: 35px 0;
+  text-align: center;
+  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #bebebe
+}
+
+.about_nav ul,
+.footer_nav ul {
+  display: inline-block
+}
+
+.about_nav ul:after,
+.footer_nav ul:after {
+  content: "";
+  display: block;
+  clear: both
+}
+
+.about_nav li,
+.footer_nav li {
+  float: left;
+  margin-right: 40px
+}
+
+.about_nav li:last-child,
+.footer_nav li:last-child {
+  margin-right: 0
+}
+
+.about_nav a,
+.footer_nav a {
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #f1f1f1;
+  position: relative;
+  z-index: 1;
+  padding: 5px;
+  font-family: "NexaLight"
+}
+
+.about_nav a:hover,
+.footer_nav a:hover {
+  color: #202020
+}
+
+.about_nav a:before,
+.footer_nav a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #f1f1f1;
+  -webkit-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+  z-index: -1;
+  text-align: left
+}
+
+.about_nav a:after,
+.footer_nav a:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  background: #f1f1f1;
+  -webkit-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+  z-index: -1;
+  text-align: right
+}
+
+.about_nav a:hover:after,
+.about_nav a:hover:before,
+.footer_nav a:hover:after,
+.footer_nav a:hover:before {
+  width: 50%
+}
+
+@media screen and (max-width:768px) {
+
+  .about_nav,
+  .footer_nav {
+    padding: 20px 0
+  }
+
+  .about_nav a,
+  .footer_nav a {
+    font-size: 18px
+  }
+}
+
+@media screen and (max-width:600px) {
+
+  .about_nav li,
+  .footer_nav li {
+    margin-right: 25px
+  }
+}
+
+@media screen and (max-width:520px) {
+
+  .about_nav a,
+  .footer_nav a {
+    font-size: 16px
+  }
+
+  .about_nav li,
+  .footer_nav li {
+    float: none;
+    display: inline-block;
+    margin: 10px
+  }
+
+  .about_nav li:last-child,
+  .footer_nav li:last-child {
+    margin: 10px
+  }
+}
+
+.about_nav a,
+.footer_nav a {
+  color: #bebebe
+}
+
+.about_nav a:hover,
+.footer_nav a:hover {
+  color: #fff
+}
+
+.about_nav a:after,
+.about_nav a:before,
+.footer_nav a:after,
+.footer_nav a:before {
+  background: #bebebe
+}
+
+.about_inner {
+  position: relative;
+  margin-top: 75px
+}
+
+.about_inner:after {
+  content: "";
+  display: block;
+  clear: both
+}
+
+.about_l,
+.about_r {
+  float: left;
+  width: 50%
+}
+
+.about_r_in {
+  margin: 80px 0 0 50px
+}
+
+.about_title {
+  font-family: "NexaLight";
+  font-size: 60px;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  white-space: nowrap
+}
+
+@media screen and (max-width:991px) {
+  .about_title {
+    font-size: 40px
+  }
+}
+
+.about_text {
+  margin-top: 45px
+}
+
+.about_text p {
+  font-size: 20px;
+  line-height: 1.8em;
+  margin-bottom: 35px
+}
+
+.about_text p:last-child {
+  margin-bottom: 0
+}
+
+.author_name {
+  font-size: 36px;
+  margin-top: 50px;
+  font-family: "FeltTipWoman"
+}
+
+.about_scroll_down,
+.portfolio_scroll_down {
+  color: #f1f1f1;
+  font-family: "NexaBold";
+  text-transform: uppercase;
+  font-size: 18px;
+  margin-top: 135px;
+  text-align: center;
+  line-height: 1.6em;
+  margin-top: 80px;
+  color: #bebebe
+}
+
+.about_scroll_down:after,
+.portfolio_scroll_down:after {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 32px;
+  background: url(../images/double-arrow-sprite.png) no-repeat 0px 0px;
+  margin: 20px auto 0 auto;
+  -webkit-animation: moveArrow 1s ease infinite;
+  animation: moveArrow 1s ease infinite
+}
+
+@keyframes moveArrow {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+  }
+
+  50% {
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px)
+  }
+
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+  }
+}
+
+.about_scroll_down:after,
+.portfolio_scroll_down:after {
+  background-position: -42px 0
+}
+
+@media screen and (max-width:899px) {
+
+  .about_l,
+  .about_r {
+    float: none;
+    width: 100%;
+    text-align: center
+  }
+
+  .about_r_in {
+    margin: 80px 0 0 0
+  }
+
+  .about_text {
+    text-align: left
+  }
+}
+
+@media screen and (max-width:480px) {
+  .about_text p {
+    font-size: 16px
+  }
+}
+
+@media screen and (max-width:380px) {
+  .about_title {
+    font-size: 32px
+  }
+}
+
+.portfolio_nav {
+  padding: 35px 0;
+  text-align: center;
+  border-bottom: 1px solid #fff;
+}
+
+.portfolio_nav ul {
+  display: inline-block
+}
+
+.portfolio_nav ul:after {
+  content: "";
+  display: block;
+  clear: both
+}
+
+.portfolio_nav li {
+  float: left;
+  margin-right: 40px
+}
+
+.portfolio_nav li:last-child {
+  margin-right: 0
+}
+
+.portfolio_nav a {
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #f1f1f1;
+  position: relative;
+  z-index: 1;
+  padding: 5px;
+  font-family: "NexaLight"
+}
+
+.portfolio_nav a:hover {
+  color: #202020
+}
+
+.portfolio_nav a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #f1f1f1;
+  -webkit-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+  z-index: -1;
+  text-align: left
+}
+
+.portfolio_nav a:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  background: #f1f1f1;
+  -webkit-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+  z-index: -1;
+  text-align: right
+}
+
+.portfolio_nav a:hover:after,
+.portfolio_nav a:hover:before {
+  width: 50%
+}
+
+@media screen and (max-width:768px) {
+  .portfolio_nav {
+    padding: 20px 0
+  }
+
+  .portfolio_nav a {
+    font-size: 18px
+  }
+}
+
+@media screen and (max-width:600px) {
+  .portfolio_nav li {
+    margin-right: 25px
+  }
+}
+
+@media screen and (max-width:520px) {
+  .portfolio_nav a {
+    font-size: 16px
+  }
+
+  .portfolio_nav li {
+    float: none;
+    display: inline-block;
+    margin: 10px
+  }
+
+  .portfolio_nav li:last-child {
+    margin: 10px
+  }
+}
+
+.portfolio {
+  background: url(../images/portfolio-bg.jpg) no-repeat center;
+  background-size: cover
+}
+
+.portfolio_title {
+  font-family: "NexaLight";
+  font-size: 60px;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  white-space: nowrap;
+  text-align: center;
+  color: #f1f1f1;
+  margin-top: 80px
+}
+
+@media screen and (max-width:991px) {
+  .portfolio_title {
+    font-size: 40px
+  }
+}
+
+@media screen and (max-width:380px) {
+  .portfolio_title {
+    font-size: 32px
+  }
+}
+
+.photo_list {
+  margin: 60px -15px -15px -15px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap
+}
+
+.photo_list:hover li:not(:hover) {
+  opacity: 0.6
+}
+
+.photo_list li {
+  margin: 15px;
+  -webkit-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease
+}
+
+.photo_list a {
+  outline: none
+}
+
+.photo_list img {
+  display: block
+}
+
+@media screen and (max-width:880px) {
+  .photo_list li {
+    width: calc(25% - 30px)
+  }
+}
+
+@media screen and (max-width:768px) {
+  .photo_list li {
+    width: calc(33.33% - 30px)
+  }
+}
+
+@media screen and (max-width:600px) {
+  .photo_list li {
+    width: calc(50% - 30px)
+  }
+}
+
+@media screen and (max-width:400px) {
+  .photo_list {
+    margin: 60px 0 0 0;
+  }
+
+  .photo_list li {
+    width: 100%;
+    margin: 15px 0
+  }
+
+  .photo_list img {
+    margin: 0 auto
+  }
+}
+
+.contact_in_wrapper {
+  margin: 200px 0;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #202020
+}
+
+.contact_subtitle {
+  font: normal 30px "NexaBold";
+  text-transform: uppercase;
+  margin-bottom: 41px;
+}
+
+.contact_mail {
+  font-size: 60px;
+  font-family: "NexaLight";
+  text-transform: uppercase
+}
+
+.contact_phone {
+  font: normal 48px "NexaLight"
+}
+
+.contact_mail,
+.contact_phone {
+  margin-bottom: 63px;
+  display: inline-block;
+  position: relative;
+}
+
+
+.contact_mail::before,
+.contact_phone::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  height: 40%;
+  width: 0;
+  background-color: #bebebe4d;
+  transition: width 250ms ease-in-out;
+  z-index: -1;
+}
+
+.contact_mail:hover::before,
+.contact_phone:hover::before {
+  width: 100%;
+}
+
+.contact_media_list {
+  display: flex;
+  justify-content: center;
+}
+
+.contact_media_list li {
+  margin-right: 25px;
+  transition: transform 350ms ease-in-out;
+}
+
+.contact_media_list li:last-child {
+  margin-right: 0;
+}
+
+.contact_media_list li:hover {
+  transform: translateY(3px);
+}
+
+.contact_media_list li a,
+.contact_media_list li img {
+  display: block;
+}
+
+.by {
+  padding: 39.5px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #bebebe;
+  font-size: 18px;
+  font-family: NexaLight;
+  color: #bebebe;
+  letter-spacing: 0.45px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+
+  .contact_in_wrapper {
+    margin: 80px 0;
+  }
+
+  .contact_mail {
+    font-size: 38px;
+  }
+
+  .contact_phone {
+    font-size: 30px;
+  }
+
+  .contact_subtitle {
+    font-size: 26px;
+    margin-bottom: 24px;
+  }
+}
+
+
+@media (max-width: 580px) {
+
+  .contact_mail,
+  .contact_phone {
+    font-size: 20px;
+    margin-bottom: 48px;
+  }
+
+  .contact_mail::before,
+  .contact_phone::before {
+    height: 30%;
+  }
+
+  .contact_subtitle {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  .contact_media_list li a {
+    width: 40px;
+    height: 40px;
+  }
+
+  .by {
+    font-size: 16px;
+  }
+}
+
+.mfp-fade.mfp-bg {
+  opacity: 0;
+  -webkit-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease
+}
+
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.8
+}
+
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0
+}
+
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+  -webkit-transform: scale(0) rotate(45deg);
+  -ms-transform: scale(0) rotate(45deg);
+  transform: scale(0) rotate(45deg);
+  -webkit-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease
+}
+
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+  -webkit-transform: scale(1) rotate(0);
+  -ms-transform: scale(1) rotate(0);
+  transform: scale(1) rotate(0)
+}
+
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0)
+}
+
+/*# sourceMappingURL=main.css.map */
